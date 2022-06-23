@@ -1,0 +1,121 @@
+@use '../helpers/mixins' as helperMixin;
+@use '../helpers/variables.scss';
+@use '../library/library.scss';
+
+.footer {
+  &__top {
+    margin-bottom: 40px;
+  }
+  &__mid {
+    margin-bottom: 50px;
+  }
+}
+.footer-container {
+  padding: 50px 20px;
+}
+.top-footer {
+  display: flex;
+  justify-content: space-between;
+  &__logo-img {
+   width: 130px;
+   height: 30px;   
+  }
+  &__copyright-text {
+    @include helperMixin.fontMontserrat(400, 14px, 17px);
+    color: #000;
+    margin: 0;
+  }
+  &__socials-link {
+    text-decoration: none;
+    margin-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+  &__socials-link:nth-last-of-type(1) {
+    margin-right: 0;
+  }
+}
+.mid-footer {
+  display: flex;
+  justify-content: space-between;
+  &__about-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 65px;
+  }
+
+  &__heading {
+    @include helperMixin.fontMontserrat(600, 14px, 17px);
+    color: rgba(0, 0, 0, 0.65);
+    text-decoration: none;
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    @include helperMixin.fontMontserrat(400, 14px, 17px);
+    color: #000;
+    text-decoration: none;
+  }
+
+  &__service-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 44px;
+  }
+
+  &__products-container {
+    margin-right: 44px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__for-customers-container {
+    margin-right: 45px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__address-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__address-link {
+    @include helperMixin.fontMontserrat(400, 12px, 14px);
+    color: #000;
+    text-decoration: none;
+  }
+
+  &__address-link-1 {
+    margin-bottom: 15px;
+  }
+
+  &__address-link-2 {
+    margin-bottom: 3px;
+  }
+
+  &__address-link-3 {
+    margin-bottom: 15px;
+  }
+
+  &__address-link-4 {
+    margin-bottom: 3px;
+  }
+}
+.bot-footer {
+  &__text {
+    @include helperMixin.fontMontserrat(400, 10px, 12px);
+    text-align: center;
+  }
+
+  &__top {
+    margin: 0 0 15px 0;
+  }
+
+  &__bottom {
+    margin: 0;
+  }
+}
+
+
+

@@ -1,0 +1,248 @@
+@use '../helpers/mixins' as helperMixin;
+@use '../helpers/variables.scss';
+@use '../library/library.scss';
+@use '../library/components/normalize.scss';
+
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-Light.woff2') format('woff2'),
+      url('../fonts/Montserrat/Montserrat-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-Regular.woff2') format('woff2'),
+      url('../fonts/Montserrat/Montserrat-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-Medium.woff2') format('woff2'),
+      url('../fonts/Montserrat/Montserrat-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-SemiBold.woff2') format('woff2'),
+      url('../fonts/Montserrat/Montserrat-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-Bold.woff2') format('woff2'),
+      url('../fonts/Montserrat/Montserrat-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-ExtraBold.woff2') format('woff2'),
+      url('../fonts/Montserrat/Montserrat-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter/Inter-Regular.woff2') format('woff2'),
+      url('../fonts/Inter/Inter-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Mulish';
+  src: url('../fonts/Mulish/Mulish-Bold.woff2') format('woff2'),
+      url('../fonts/Mulish/Mulish-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.wrapper {
+  @include helperMixin.wrapper;
+}
+.header {
+  background-color: #fff;
+  box-shadow: 0 4px 25px 0px rgba(0, 0, 0, 0.19);
+  &__container {
+    display: flex;
+    padding: 18px 20px 4px 20px;
+  }
+  &__logo-link {
+    margin-right: 40px;
+    margin-top: 3px;
+  }
+
+  &__turnkey {
+    margin-right: 31px;
+    margin-bottom: 18px;
+  }
+
+  &__nav {
+    margin: 6px 39px 26px 0;
+
+  }
+
+  &__call {
+    margin-right: 15px;
+  }
+
+  &__search {
+    margin-right: 15px;
+  }
+
+  &__login {
+    margin-right: 0;
+  }
+}
+
+.turnkey {
+  background-color: variables.$BackgroundOrange;
+  width: 137px;
+  height: 30px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  &__text {
+    margin-left: 11px;
+    @include helperMixin.fontMontserrat(600, 8px, 16px);
+    color: #FFFFFF;
+  }
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  
+  &__link {
+    text-decoration: none;
+    @include helperMixin.fontMontserrat(400, 12px, 16px);
+    color: variables.$SecondaryColor;
+  }
+
+  &__link--checked {
+    @include helperMixin.fontMontserrat(400, 12px, 16px);
+    color: variables.$TitleColor;
+  }
+  .first {
+    margin-right: 22px;
+  }
+  .second {
+    margin-right: 19px;
+  }
+  .third {
+    margin-right: 16px;
+  }
+  .fourth {
+    margin-right: 18px;
+  }
+  .fifth {
+    margin-right: 0;
+  }
+}
+.call-container {
+  width: 160px;
+  height: 30px;
+  background-color: variables.$BackgroundOrange;
+  border-radius: 15px;
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  &__callme {
+    display: none;
+  }
+  &__number::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(../images/receiver.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border-radius: 15px;
+  }
+
+  &__number {
+    @include helperMixin.fontMontserrat(600, 12px, 16px);
+    margin: 7px 8px 7px 37px;
+    color: #FFFFFF;
+  }
+
+  &__text {
+    margin: 0;
+    position: absolute;
+    bottom: -18px;
+    left: 22px;
+    @include helperMixin.fontMontserrat(400, 8px, 10px);
+    color: #000000;
+  }
+}
+.search-container {
+  position: relative;
+  
+  &__input {
+    border-radius: 15px;
+    width: 139px;
+    height: 30px;
+    border: 0.8px solid variables.$BackgroundOrange;
+    padding: 0 35px 0 10px;
+  }
+  &__search-link {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: variables.$BackgroundOrange;
+    background-image: url('../images/search.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+.login-container {
+  width: 75px;
+  height: 30px;
+  background-color: variables.$BackgroundOrange;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  &__img {
+    width: 12px;
+    height: 12px;
+    margin-right: 7px;
+  }
+  &__text {
+    @include helperMixin.fontMontserrat(600, 10px, 16px);
+    color: #FFFFFF;
+  }
+}
+.nav-button-mob {
+  display: none;
+}
+.search-button-mob {
+  display: none;
+}
+.user-link-mob {
+  display: none;
+}

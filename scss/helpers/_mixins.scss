@@ -1,0 +1,26 @@
+@mixin wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+@mixin wrapper-mob {
+  max-width: 320px;
+  margin: 0 auto;
+}
+@mixin fontMontserrat($fw,$fs,$lh) {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+}
+@mixin fontInter($fw,$fs,$lh) {
+  font-family: 'Inter', sans-serif;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+}
+@mixin fontMulish($fw,$fs,$lh) {
+  font-family: 'Mulish', sans-serif;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+}
