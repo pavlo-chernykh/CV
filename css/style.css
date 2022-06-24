@@ -642,11 +642,11 @@ body {
 .container .right_Side .skills .box .percent .js {
   width: 60%;
 }
-.container .right_Side .skills .box .percent .canban {
-  width: 5%;
+.container .right_Side .skills .box .percent .scss {
+  width: 70%;
 }
-.container .right_Side .skills .box .percent .jira {
-  width: 5%;
+.container .right_Side .skills .box .percent .git {
+  width: 50%;
 }
 
 @media (max-width: 1000px) {
