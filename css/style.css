@@ -489,6 +489,7 @@ body {
   color: #fff;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
+  text-decoration: none;
 }
 .container .left_Side .profileText {
   position: relative;
